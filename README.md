@@ -31,6 +31,12 @@ You'd run `git clone git@github.com:myusername/vagrant-rackspace-cloudsites.git`
 ### Step 2
 Install the [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) plugin by typing `vagrant plugin install vagrant-vbguest`. This is important, because it will ensure the **VirtualBox Guest Additions** are installed prior to Vagrant trying to create the synced folders.
 
+**Note:** After installing this plugin, you may find that one or more of your other Vagrant boxes no longer start up properly. If you encounter this, add the following to their Vagrantfile to disable the vagrant-vbguest update check during startup:
+
+```shell
+config.vbguest.auto_update = false
+```
+
 ### Step 3
 Run `vagrant up`. This will probably take a few minutes to do the whole process, but you should only have to do this once. After this, your machine will be ready to use.
 
