@@ -75,4 +75,24 @@ alias vprovision="(cd ~/Web/vagrant-rackspace-cloudsites && vagrant provision)"
 alias vssh="(cd ~/Web/vagrant-rackspace-cloudsites && vagrant ssh)"
 ```
 
+## Sequel Pro Setup
+If you're on a Mac and you use [Sequel Pro](https://www.sequelpro.com/), here's what you need to know to set up your database connection.
+
+1. Create your new connection and select the **SSH** tab.
+2. Fill in the following settings:
+```
+MySQL Host: 127.0.0.1
+Username: root
+Password: root
+SSH Host: 192.168.33.33
+SSH User: vagrant
+```
+3. Click the little key icon next to the SSH Key/SSH Password field.
+4. Check the box next to **Show hidden files**.
+5. Browse to and select `vagrant-rackspace-cloudsites/.vagrant/machines/default/virtualbox/private_key`.
+6. Test connection and save changes.
+7. It should totally work!
+
+If you're on a PC then you're probably a power user and you're smart enough to figure this out anyway. You genius, you!
+
 ## Enjoy!
