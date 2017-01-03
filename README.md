@@ -8,6 +8,7 @@ This Vagrantfile and provisioning script will create a virtual machine using [Vi
 - PHP 5.6.29
 
 The machine's IP will be `192.168.33.33`.
+
 The synced folder for all sites will be `/var/www/vhosts` on the guest machine.
 
 ## Installation
