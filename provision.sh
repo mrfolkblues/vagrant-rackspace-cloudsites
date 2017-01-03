@@ -78,6 +78,9 @@ fi
 sudo chown vagrant:vagrant /var/www/html
 sudo chown vagrant:vagrant /var/www/vhosts
 
+# backwards compatibility with our other Vagrant setup
+sudo ln -fs /var/www/vhosts /vagrant_data
+
 # install additional PHP modules
 
 # ionCube - if you need it, uncomment these lines
