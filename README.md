@@ -58,7 +58,7 @@ Then [edit your hosts file](http://www.howtogeek.com/howto/27350/beginner-geek-h
 ```
 
 ## Optional: Create Aliases
-It can be tedious to change into the `vagrant-rackspace-cloudsites` folder every time you want to start the server or ssh into it. The following aliases will allow you to run the usual commands from anywhere. You may need to edit the paths depending on your own folder structure.
+It can be tedious to change into the `vagrant-rackspace-cloudsites` folder every time you want to start the server or ssh into it. The following aliases will allow you to run the usual commands from anywhere. You may need to edit the paths depending on your own folder structure. Add these to your `.bashrc`, `.zshrc`, or other equivalent file.
 
 ```
 alias vup="(cd ~/Web/vagrant-rackspace-cloudsites && vagrant up)"
