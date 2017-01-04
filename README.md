@@ -9,6 +9,15 @@ This Vagrantfile and provisioning script will create a virtual machine using [Vi
 
 There are a few PHP features missing from this setup at the moment. If you were to run `phpinfo();` on both this setup and a real Cloud Site, you'd see the differences. They should be minimal and unobtrusive. For example, this setup is lacking the Zend Guard Loader because installation wasn't simple and it wasn't critical to include at the time I created this.
 
+## Contents
+1. [IP and Synced Folder](#ip-and-synced-folder)
+2. [How to Use](#how-to-use)
+3. [Installation](#installation)
+4. [Synced Folders](#synced-folders)
+5. [Virtual Host Example](#virtual-host-example)
+6. [Optional: Create Aliases](#optional-create-aliases)
+7. [Sequel Pro Setup](#sequel-pro-setup)
+
 ## IP and Synced Folder
 
 - The machine's IP will be `192.168.33.33`.
