@@ -14,6 +14,9 @@ There are a few PHP features missing from this setup at the moment. If you were 
 - The machine's IP will be `192.168.33.33`.
 - The synced folder for all sites will be `/var/www/vhosts` on the guest machine.
 
+## How to Use
+It's a bit different than how most Vagrant setups are done. The intent here is to create a single virtual machine that can host all of your sites simultaneously by using virtual hosts. The [vhost](https://gist.github.com/fideloper/2710970#file-vhost-sh) command is included to make virtual host setup easier. SSH into the machine with `vagrant ssh` and set up the virtual hosts, then edit your hosts file to point your custom domain at the virtual machine's IP. Run the server with `vagrant up` and stop it when you're done with `vagrant halt`, but you'll probably *never* want to run `vagrant destroy` after it's set up. Of course, if you know what you're doing, you can reconfigure this a little and use it however you like.
+
 ## Installation
 
 ### Step 1
@@ -44,9 +47,6 @@ Run `vagrant up`. This will probably take a few minutes to do the whole process,
 The folder that is one level up from the Vagrantfile (in the example above, this is the `Web` folder) is a synced folder on the guest machine. As a result, you'll find all of your sites in `/var/www/vhosts`.
 
 The default synced folder also exists, but in this application it's not terribly useful.
-
-## How to Use
-It's a bit different than how most Vagrant setups are done. The intent here is to create a single virtual machine that can host all of your sites simultaneously by using virtual hosts. The [vhost](https://gist.github.com/fideloper/2710970#file-vhost-sh) command is included to make virtual host setup easier. SSH into the machine with `vagrant ssh` and set up the virtual hosts, then edit your hosts file to point your custom domain at the virtual machine's IP. Run the server with `vagrant up` and stop it when you're done with `vagrant halt`, but you'll probably *never* want to run `vagrant destroy` after it's set up. Of course, if you know what you're doing, you can reconfigure this a little and use it however you like.
 
 ## Example
 If your project folder is called **project-1** and you want to access it in your browser at **project-1.dev**, first create the virtual host:
