@@ -2,7 +2,6 @@
 # vi: set ft=ruby :
 
 # Vagrant setup to get as close as possible to the Rackspace Cloud Sites configuration.
-# Last Updated: 01/03/2017
 
 # IMPORTANT: install the vagrant-vbguest plugin before running vagrant up or it will fail when trying to create the synced folder.
 # vagrant plugin install vagrant-vbguest
