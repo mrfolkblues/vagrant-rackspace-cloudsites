@@ -49,7 +49,8 @@ printf "\n${CYAN}-=-=-= Install Apache 2 and PHP 5.6.29 =-=-=-${NC}\n"
 # Rackspace uses PHP 5.6.24 but 5.6.29 should be close enough!
 # install apache2 with php5 and other php dependencies, as well as other desired php features
 sudo apt-get update
-sudo apt-get install -y apache2 php5 libapache2-mod-php5 php5-common php5-mysqlnd
+sudo apt-get install -y apache2 php5 libapache2-mod-php5 php5-common
+sudo service apache2 restart
 
 # turn off KeepAlive
 sudo sed -i -e 's/KeepAlive On/KeepAlive Off/g' /etc/apache2/apache2.conf
@@ -97,7 +98,7 @@ sudo ln -fs /var/www/vhosts /vagrant_data
 
 # Rackspace PHP extensions
 # There are a few that we have ignored for now because they require extra effort and we probably don't use them!
-sudo apt-get install -y php5-curl php5-gd php5-gmp php5-imagick php5-imap php5-intl php5-ldap php5-mcrypt php5-memcache php5-mongo php5-mysql php5-odbc php5-pgsql php5-sqlite php5-sybase php5-pspell php5-recode php5-redis php5-svn php5-xmlrpc php5-xsl php5-tidy
+sudo apt-get install -y php5-curl php5-gd php5-gmp php5-imagick php5-imap php5-intl php5-ldap php5-mcrypt php5-memcache php5-mongo php5-mysql php5-odbc php5-pgsql php5-sqlite php5-sybase php5-pspell php5-recode php5-redis php5-svn php5-xmlrpc php5-xsl php5-tidy php5-mysqlnd
 
 # configure PHP
 sed -i "s/register_argc_argv = Off/register_argc_argv = On/" /etc/php5/apache2/php.ini
