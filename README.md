@@ -43,12 +43,12 @@ config.vbguest.auto_update = false
 ### Step 3
 Run `vagrant up`. This will probably take a few minutes to do the whole process, but you should only have to do this once. After this, your machine will be ready to use.
 
-## Synced Folder
+## Synced Folders
 The folder that is one level up from the Vagrantfile (in the example above, this is the `Web` folder) is a synced folder on the guest machine. As a result, you'll find all of your sites in `/var/www/vhosts`.
 
-The default synced folder also exists, but in this application it's not terribly useful.
+The default synced folder also exists at `/var/www/html`, but in this application it's not terribly useful.
 
-## Example
+## Virtual Host Example
 If your project folder is called **project-1** and you want to access it in your browser at **project-1.dev**, first create the virtual host:
 
 ```shell
