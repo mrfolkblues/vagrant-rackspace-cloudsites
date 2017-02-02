@@ -99,6 +99,7 @@ sudo ln -fs /var/www/vhosts /vagrant_data
 # Rackspace PHP extensions
 # There are a few that we have ignored for now because they require extra effort and we probably don't use them!
 sudo apt-get install -y php5-curl php5-gd php5-gmp php5-imagick php5-imap php5-intl php5-ldap php5-mcrypt php5-memcache php5-mongo php5-mysql php5-odbc php5-pgsql php5-sqlite php5-sybase php5-pspell php5-recode php5-redis php5-svn php5-xmlrpc php5-xsl php5-tidy php5-mysqlnd
+sudo apt-get install imagemagick
 
 # configure PHP
 sed -i "s/register_argc_argv = Off/register_argc_argv = On/" /etc/php5/apache2/php.ini
